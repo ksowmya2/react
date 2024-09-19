@@ -1,38 +1,206 @@
-.App {
+/* App.css */
+
+/* Center the login container in the viewport */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f2f5; /* Light background color */
+}
+
+.login-form {
+  background-color: #fff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+  width: 100%;
+  max-width: 400px; /* Limit width for larger screens */
+}
+
+.mb-3 {
+  margin-bottom: 1rem; /* Spacing between form fields */
+}
+
+.form-label {
+  font-weight: 600; /* Make label text bold */
+  margin-bottom: 0.5rem;
+  /* Space between label and input */
+}
+
+.form-control {
+  border: 1px solid #ced4da; /* Light border color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.75rem; /* Padding inside input */
+  font-size: 1rem; /* Font size */
+  margin-left: 20px; 
+}
+.pass{
+  margin-left: 50px;
+}
+
+.btn {
+ text-align: center;
+ margin-left: 150px;
+  padding: 0.75rem 1.25rem; /* Padding inside button */
+  font-size: 1rem; /* Font size */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  border: none; /* Remove border */
+  color: white; /* White text color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* side nav  */
+/* Sidenav container styles */
+.sidenav {
+  width: 250px;
+  height: 100vh;
+  background-color: #94B1B5;  /* Background color for sidenav */
+  padding: 20px;
+  color: white;  /* Text color */
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.sidenav h2.head1 {
+  font-size: 24px;
+  color: white;  /* Text color for the heading */
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Sidebar menu items */
+.sidenav ul {
+  list-style: none;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidenav ul li {
+  margin: 15px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Links style */
+.sidenav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;  /* Primary text color */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover effect for links */
+.sidenav ul li a:hover {
+  color: #5EA497;  /* Text color on hover */
+  background-color: #333;  /* Background color on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Icon style */
+.fa-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #FFFFFF;  /* Icon color */
+  transition: all 0.3s ease;
 }
+
+/* Hover effect for icons */
+.sidenav ul li a:hover .fa-icon {
+  background-color: #5EA497;  /* Background color for icon on hover */
+  color: white;  /* Icon color on hover */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Profile image container */
+.img {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Profile image styles (rounded, no background) */
+.img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;  /* Makes the image round */
+  border: 3px solid #9B9C9B;  /* Subtle border around the image */
+  background-color: transparent;  /* No background color */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on profile image */
+.img img:hover {
+  border-color: #5EA497;  /* Change border color on hover */
+}
+
+/* Profile text */
+.head-2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.head-2 h4 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: white;  /* Text color for profile name */
+}
+
+.head-2 p {
+  font-size: 14px;
+  color: #CCCCCC;  /* Light color for profile description */
+}
+
+/* Reduced space before logout */
+.log {
+  position: absolute;
+  bottom: 10px;  /* Reduced from 20px to 10px */
+  width: 100%;
+  text-align: center;
+}
+
+.log a {
+  text-decoration: none;
+  color: #FFFFFF;  /* Text color for logout button */
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.log a:hover {
+  background-color: #5EA497;  /* Background color on hover */
+  color: white;  /* Text color on hover */
+}
+/* dashboard */
+.sidenav {
+  overflow: hidden; /* Prevent scroll bars */
+}
+.category-title {
+  color: #6a0dad; /* You can choose any color you like */
+  text-align: center;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+.sidenav {
+  height: 100vh; /* Full height */
+  position: fixed; /* Stay in place */
+  left: 0; /* Align to the left */
+  width: 16.66667%; /* 2 columns out of 12 (Bootstrap grid) */
+  background-color: #3aa87b; /* Light background */
+  overflow-y: auto; /* Scroll if needed */
+  transition: 0.3s; /* Smooth transition */
+}
+
+.main-content {
+  margin-left: 16.66667%; /* Leave space for sidenav */
+  padding: 20px; /* Add some padding */
+}
+
