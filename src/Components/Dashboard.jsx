@@ -7,7 +7,7 @@ import '../App.css';
 import { productsData1 } from '../Data/Anniversary';
 import { productsData2 } from '../Data/Wedding';
 import { productsData3 } from '../Data/Gift';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function Dashboard() {
   const birPreview = productsData.slice(0, 3); 
@@ -23,7 +23,7 @@ function Dashboard() {
     <>
       <h2 className='category-title'>{sectionTitle}</h2>
       <Row className="maindata">
-        {products.map((e) => (
+        {products.map((e, index) => (
           <Col sm={4} key={e.id} className="mb-4">
             <Link to={`/${productType}/${e.id}`}>
               <img 
@@ -41,36 +41,46 @@ function Dashboard() {
                 style={{ 
                   backgroundColor: '#3aa87b', 
                   color: 'white', 
-                  transition: 'background-color 0.3s ease' ,borderRadius:'10px'
+                  transition: 'background-color 0.3s ease',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px'
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#28a745')}
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#198754')}
-              >  <i className="fas fa-cart-shopping"></i>
-               Add To Cart
+              >
+                <i className="fas fa-cart-shopping"></i> {/* Font Awesome icon */}
+                Add To Cart
               </Button>
             </Link>
+  
+            {/* Conditionally render the 'View More' button after the third product */}
+            {index === 2 && (
+              <div className="mt-3 text-center">
+                <Link to={`/${productType}`}>
+                  <Button 
+                    variant="success" 
+                    style={{ 
+                      backgroundColor: '#5eb992', 
+                      color: 'white', 
+                      transition: 'background-color 0.3s ease',
+                      width: '150px'
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#28a745')}
+                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#198754')}
+                  >
+                    View More
+                  </Button>
+                </Link>
+              </div>
+            )}
           </Col>
         ))}
       </Row>
-      <Col sm={12} className="text-center mt-3 ml-5">
-        <Link to={`/${productType}`}>
-          <Button 
-            variant="success" 
-            style={{ 
-              backgroundColor: '#3d6e59', 
-              color: 'white', 
-              transition: 'background-color 0.3s ease',width: '150px', borderRadius:'20px', marginLeft:'500px'
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#28a745')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#198754')}
-          >
-            View More
-          </Button>
-        </Link>
-      </Col>
     </>
   );
-
+  
   return (
     <div style={{ display: 'flex' }}>
       <div style={{ position: 'fixed', width: '250px', height: '100%', overflow: 'hidden' }}>
