@@ -9,10 +9,9 @@ import Birthday from './Pages/Birthday1';
 import Wedding from './Pages/Wedding1';
 import Anniversary from './Pages/Anniversary1';
 import Gift from './Pages/Gift1';
-import Feedback from "Components/Feedback";
-
-
-
+import Feedback from './Components/Feedback';
+import Location from './Components/Location';
+import Customization from "./Components/Customization";
 function App() {
   return (
     <Router>
@@ -29,7 +28,8 @@ function App() {
           <Route path="/anniversary" element={<Anniversary />} />
           <Route path="/gift-hamper" element={<Gift />} />
           <Route path="/feedback" element={<Feedback />} />
-
+          <Route path="/location" element={<Location />} />
+          <Route path="/customization" element={<Customization />} />
         </Routes>
       </div>
     </Router>

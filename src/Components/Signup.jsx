@@ -16,14 +16,14 @@ function Signup() {
         </div>
         <div className="col-md-6">
           <label htmlFor="inputEmail4" className="form-label">Email address</label>
-          <input type="email" className="form-control" id="inputEmail4"  style={{ marginBottom: '1rem' }}  />
+          <input type="email" className="form-control" id="inputEmail4"  style={{ marginBottom: '1rem',marginLeft: '3rem'  }}  />
         </div>
         <div className="col-md-6">
           <label htmlFor="inputPassword4" className="form-label">Password</label>
           <input type="password" className="form-control" id="inputPassword4"   style={{ marginBottom: '1rem', marginLeft: '3rem' }}  />
         </div>
         <div className="col-12">
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn ">
             <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Sign up</Link>
           </button>
         </div>

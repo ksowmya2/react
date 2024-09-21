@@ -21,8 +21,8 @@ const Sidenav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/notifications">
-            <FontAwesomeIcon icon={faBell} className="fa-icon" /> Notifications
+          <Link to="/customization">
+            <FontAwesomeIcon icon={faBell} className="fa-icon" /> Customization
           </Link>
         </li>
         <li>

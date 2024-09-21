@@ -13,7 +13,7 @@ function Birthday1() {
           <Card className="card" style={{ width: '100%' }}>
             
             <Link to={`/birthday/${e.id}`}>
-              <Card.Img variant="top" src={e.image} alt={e.name} className="card-img" style={{ height: '200px', objectFit: 'cover' }} />
+              <Card.Img variant="top" src={e.image} alt={e.name} className="card-img" style={{ height: '400px', objectFit: 'cover' }} />
             </Link>
             <Card.Body>
               <Link to={`/birthday/${e.id}`}>

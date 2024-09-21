@@ -4,6 +4,7 @@
 .login-container {
   display: flex;
   justify-content: center;
+
   align-items: center;
   height: 100vh; /* Full viewport height */
   background-color: #f0f2f5; /* Light background color */
@@ -11,60 +12,95 @@
 
 .login-form {
   background-color: #fff; /* White background for the form */
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
   width: 100%;
   max-width: 400px; /* Limit width for larger screens */
+  background-color:#88BDBC;;
 }
 
 .mb-3 {
   margin-bottom: 1rem; /* Spacing between form fields */
 }
 
-.form-label {
-  font-weight: 600; /* Make label text bold */
-  margin-bottom: 0.5rem;
-  /* Space between label and input */
+.form-label{
+  color: #FFFFFF;
 }
 
 .form-control {
   border: 1px solid #ced4da; /* Light border color */
   border-radius: 4px; /* Rounded corners */
-  padding: 0.75rem; /* Padding inside input */
+  padding: 0.45rem; /* Padding inside input */
   font-size: 1rem; /* Font size */
-  margin-left: 20px; 
+  margin-left: 10px; 
+  color: white;
+  width: 200px;
+  
 }
-.pass{
-  margin-left: 50px;
-}
+
 
 .btn {
- text-align: center;
- margin-left: 150px;
-  padding: 0.75rem 1.25rem; /* Padding inside button */
-  font-size: 1rem; /* Font size */
-  border-radius: 4px; /* Rounded corners */
+  text-align: center;
+  margin-left: 150px;
+   padding: 0.75rem 1.25rem; /* Padding inside button */
+   font-size: 1rem; /* Font size */
+   border-radius: 4px; /* Rounded corners */
+ }
+
+.btn {
+  background-color:#254E58; 
+  border: 1px solid white; 
+  color:white; 
 }
 
-.btn-primary {
-  background-color: #007bff; /* Primary button color */
-  border: none; /* Remove border */
-  color: white; /* White text color */
+.btn:hover {
+ font-size: 15px;
+ background-color: #116466;
+ border: 1px solid #757e7e; 
+}
+/* home */
+.sidenav2 {
+  position: fixed; /* Fix the sidebar */
+  top: 0;
+  left: 0;
+  width: 16.66667%; /* This corresponds to col-2 in Bootstrap (1/6 of the width) */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f8f9fa; /* Background color */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
-.btn-primary:hover {
-  background-color: #0056b3; /* Darker color on hover */
+
+.main-content1 {
+  margin-left: 200px; /* Leave space for the fixed sidebar */
+  padding: 20px; /* Add some padding */
 }
 
 /* side nav  */
-/* Sidenav container styles */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16.66667%; /* Col-2 corresponds to ~16.66667% width */
+  height: 100vh; /* Full viewport height */
+  background-color: #f8f9fa; 
+  z-index: 1000; 
+  overflow-y: auto; 
+}
+
+/* Ensure the content area adjusts accordingly */
+.content {
+  margin-left: 16.66667%; 
+  padding: 20px; /* Add padding as needed */
+}
 .sidenav {
   width: 250px;
   height: 100vh;
-  background-color: #94B1B5;  /* Background color for sidenav */
+  background-color: #3aa87b;  
   padding: 20px;
-  color: white;  /* Text color */
+  color: white;  
   font-family: 'Arial', sans-serif;
   position: relative;
 }
@@ -104,7 +140,7 @@
   background-color: #333;  /* Background color on hover */
 }
 
-/* Icon style */
+
 .fa-icon {
   margin-right: 10px;
   font-size: 18px;
@@ -112,27 +148,23 @@
   transition: all 0.3s ease;
 }
 
-/* Hover effect for icons */
+
 .sidenav ul li a:hover .fa-icon {
   background-color: #5EA497;  /* Background color for icon on hover */
-  color: white;  /* Icon color on hover */
+  color: white; 
   border-radius: 5px;
   padding: 5px;
 }
-
-/* Profile image container */
 .img {
   text-align: center;
   margin-top: 20px;
 }
-
-/* Profile image styles (rounded, no background) */
 .img img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;  /* Makes the image round */
-  border: 3px solid #9B9C9B;  /* Subtle border around the image */
-  background-color: transparent;  /* No background color */
+  border-radius: 50%;
+  border: 3px solid #9B9C9B; 
+  background-color: transparent; 
   transition: all 0.3s ease;
 }
 
@@ -150,12 +182,12 @@
 .head-2 h4 {
   font-size: 20px;
   margin: 5px 0;
-  color: white;  /* Text color for profile name */
+  color: white;  
 }
 
 .head-2 p {
   font-size: 14px;
-  color: #CCCCCC;  /* Light color for profile description */
+  color: #CCCCCC;  
 }
 
 /* Reduced space before logout */
@@ -185,22 +217,246 @@
   overflow: hidden; /* Prevent scroll bars */
 }
 .category-title {
-  color: #6a0dad; /* You can choose any color you like */
+  color: #3aa87b; /* You can choose any color you like */
   text-align: center;
+  font-weight: bold;
+  font-size: 38px;
   margin: 20px 0; /* Add some margin for spacing */
 }
-.sidenav {
-  height: 100vh; /* Full height */
-  position: fixed; /* Stay in place */
-  left: 0; /* Align to the left */
-  width: 16.66667%; /* 2 columns out of 12 (Bootstrap grid) */
-  background-color: #3aa87b; /* Light background */
-  overflow-y: auto; /* Scroll if needed */
-  transition: 0.3s; /* Smooth transition */
-}
+
 
 .main-content {
-  margin-left: 16.66667%; /* Leave space for sidenav */
-  padding: 20px; /* Add some padding */
+  margin-left: 16.66667%; 
+  padding: 20px; 
 }
+/* location */
+
+.loca1{
+   padding-left: 20px; 
+    margin-left: 100px; 
+}
+
+.sidenav1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px; /* Sidebar width */
+  height: 100vh;
+  overflow: hidden;
+  width: 16.66667%; 
+  background-color: #3aa87b; 
+  z-index: 1000; 
+  overflow-y: auto; 
+}
+
+
+.content {
+  margin-left: 16.66667%; /* Offset for the fixed sidebar */
+  padding: 20px; /* Add padding as needed */
+}
+
+/* Other existing styles */
+.location-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  margin: 40px auto;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+}
+
+a {
+  text-decoration: none; 
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.contact-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-paragraph {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  color: #2b7a78; ;
+}
+
+.social-icons a {
+  border-radius: 50%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 10px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+.social-icons a:nth-child(1) .rounded-circle {
+  color: #1877F2;
+}
+.social-icons a:nth-child(2) .rounded-circle {
+  color: #fbad50; 
+}
+.social-icons a:nth-child(3) .rounded-circle {
+  color: #0077B5; 
+}
+.social-icons a:hover .rounded-circle {
+  background-color: #e6e6e6; 
+  transition: background-color 0.3s;
+}
+
+.map-iframe {
+  width: calc(100% - 20px); /* Full width minus the gap */
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to the map */
+  margin-left: 20px; /* Adds gap between sidenav and map */
+  margin-bottom: 40px; /* Keep the bottom margin */
+}
+
+.info a{
+  text-decoration: none;
+}
+.info1{
+  display: flex;
+  justify-content: space-between;
+  gap:50px;
+}
+/* feedback */
+.feedback-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.mood-options button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.2s;
+}
+
+.mood-options button:hover {
+  transform: scale(1.2);
+}
+
+.rating-options label {
+  margin-right: 10px;
+}
+
+.feature-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-options label {
+  margin: 5px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* customization */
+.custimg {
+  margin-top: 100px;
+  background-image: url('./Assests/back2.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px; 
+  width: 100%; /* Set width to 100% */
+  position: relative; /* Use relative positioning for the overlay */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center content within the div */
+  color: rgb(90, 121, 90); /* Text color */
+  max-width: 600px; /* Limit the width of text */
+}
+
+
+
+.custtxt {
+  margin: 0;
+  text-align: center;
+}
+
+button {
+  border: 2px solid rgb(52, 83, 52);
+  border-radius: 8px;
+  background-color: white;
+  color: green;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: rgb(101, 126, 101);
+  color: white;
+}
+
+/* Ensure sidenav is fixed */
+
+
 

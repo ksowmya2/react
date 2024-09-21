@@ -1,67 +1,135 @@
 import React, { useState } from 'react';
-import { Form, Button, Container } from 'react-bootstrap';
-import './App.css'; // Import your custom CSS file
+import '../App.css';
+import Sidenav from './Sidenav';
 
-const FeedbackForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+function Feedback() {
+  const [mood, setMood] = useState(null);
+  const [rating, setRating] = useState(null);
+  const [bestFeature, setBestFeature] = useState([]);
+  const [feedback, setFeedback] = useState('');
+
+  const handleMoodChange = (selectedMood) => {
+    setMood(selectedMood);
+  };
+
+  const handleRatingChange = (selectedRating) => {
+    setRating(selectedRating);
+  };
+
+  const handleFeatureChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setBestFeature([...bestFeature, value]);
+    } else {
+      setBestFeature(bestFeature.filter((feature) => feature !== value));
+    }
+  };
+
+  const handleFeedbackChange = (event) => {
+    setFeedback(event.target.value);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Feedback submitted:', { name, email, message });
-    setName('');
-    setEmail('');
-    setMessage('');
+    console.log('Mood:', mood);
+    console.log('Rating:', rating);
+    console.log('Best Feature:', bestFeature);
+    console.log('Feedback:', feedback);
   };
 
   return (
-    <Container className="feedback-container">
-      <h2 className="text-center mb-4">Feedback Form</h2>
-      <Form onSubmit={handleSubmit} className="feedback-form">
-        <Form.Group controlId="formName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control 
-            type="text" 
-            placeholder="Enter your name" 
-            value={name} 
-            onChange={(e) => setName(e.target.value)} 
-            required 
-            className="custom-input"
-          />
-        </Form.Group>
+    <div className="container-fluid">
+      <div className="row">
+        {/* Sidebar */}
+        <div className="col-2">
+          <Sidenav />
+        </div>
 
-        <Form.Group controlId="formEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control 
-            type="email" 
-            placeholder="Enter your email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-            className="custom-input"
-          />
-        </Form.Group>
+        {/* Main Content */}
+        <div className="col-10 mt-5" >
+          <div className="feedback-container" style={{marginTop:'60px'}}>
+            <h2>Feedback</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="question">
+                <p>How would you describe your mood after using our product for the first time?</p>
+                <div className="mood-options">
+                  <button type="button" onClick={() => handleMoodChange('happy')}>
+                    😊
+                  </button>
+                  <button type="button" onClick={() => handleMoodChange('neutral')}>
+                    😐
+                  </button>
+                  <button type="button" onClick={() => handleMoodChange('sad')}>
+                    😔
+                  </button>
+                </div>
+              </div>
 
-        <Form.Group controlId="formMessage">
-          <Form.Label>Feedback</Form.Label>
-          <Form.Control 
-            as="textarea" 
-            rows={3} 
-            placeholder="Your feedback here..." 
-            value={message} 
-            onChange={(e) => setMessage(e.target.value)} 
-            required 
-            className="custom-textarea"
-          />
-        </Form.Group>
+              <div className="question">
+                <p>How would you rate the quality of our product?</p>
+                <div className="rating-options">
+                  {[1, 2, 3, 4, 5].map((value) => (
+                    <label key={value}>
+                      <input
+                        type="radio"
+                        name="rating"
+                        value={value}
+                        checked={rating === value}
+                        onChange={() => handleRatingChange(value)}
+                      />
+                      {value}
+                    </label>
+                  ))}
+                </div>
+              </div>
 
-        <Button variant="success" type="submit" className="mt-3 custom-button">
-          Submit Feedback
-        </Button>
-      </Form>
-    </Container>
+              <div className="question">
+                <p>Which feature is the best for you?</p>
+                <div className="feature-options">
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="Integration options and tools"
+                      checked={bestFeature.includes('Integration options and tools')}
+                      onChange={handleFeatureChange}
+                    />
+                    Integration options and tools
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="The advanced search functionality"
+                      checked={bestFeature.includes('The advanced search functionality')}
+                      onChange={handleFeatureChange}
+                    />
+                    The advanced search functionality
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="The customizable settings"
+                      checked={bestFeature.includes('The customizable settings')}
+                      onChange={handleFeatureChange}
+                    />
+                    The customizable settings
+                  </label>
+                </div>
+              </div>
+
+              <div className="question">
+                <p>Your feedback</p>
+                <textarea value={feedback} onChange={handleFeedbackChange} />
+              </div>
+
+              <button type="submit" className="submit-button">
+                Send Feedback
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
-export default FeedbackForm;
+export default Feedback;

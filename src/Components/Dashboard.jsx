@@ -7,6 +7,7 @@ import '../App.css';
 import { productsData1 } from '../Data/Anniversary';
 import { productsData2 } from '../Data/Wedding';
 import { productsData3 } from '../Data/Gift';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Dashboard() {
   const birPreview = productsData.slice(0, 3); 
@@ -28,7 +29,7 @@ function Dashboard() {
               <img 
                 src={e.image} 
                 alt={e.name} 
-                style={{ height: '200px', width: '100%', objectFit: 'cover', borderRadius: '8px' }} 
+                style={{ height: '300px', width: '80%', objectFit: 'cover', borderRadius: '8px' }} 
               />
             </Link>
             <h4>{e.name}</h4>
@@ -37,21 +38,29 @@ function Dashboard() {
               <Button 
                 variant="success" 
                 onClick={() => handleAddToCart(e.id)} 
-                style={{ transition: 'background-color 0.3s ease' }}
+                style={{ 
+                  backgroundColor: '#3aa87b', 
+                  color: 'white', 
+                  transition: 'background-color 0.3s ease' ,borderRadius:'10px'
+                }}
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#28a745')}
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#198754')}
-              >
-                Order
+              >  <i className="fas fa-cart-shopping"></i>
+               Add To Cart
               </Button>
             </Link>
           </Col>
         ))}
       </Row>
-      <Col sm={12} className="text-center mt-3">
+      <Col sm={12} className="text-center mt-3 ml-5">
         <Link to={`/${productType}`}>
           <Button 
             variant="success" 
-            style={{ width: '150px', transition: 'background-color 0.3s ease' }}
+            style={{ 
+              backgroundColor: '#3d6e59', 
+              color: 'white', 
+              transition: 'background-color 0.3s ease',width: '150px', borderRadius:'20px', marginLeft:'500px'
+            }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#28a745')}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#198754')}
           >

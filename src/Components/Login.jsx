@@ -8,16 +8,16 @@ const Login = () => {
       <form className="login-form">
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" size={15} />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
           <input type="password" className="form-control pass" id="exampleInputPassword1" />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn ">
         <Link to="/Dashboard" style={{ color: 'inherit', textDecoration: 'none' }} >Login</Link>
         </button>
-        <p style={{  textAlign:'center' }}>Don't have an Account? <Link to='/signup' style={{ color: 'inherit', textDecoration: 'none', }}>Signup</Link> </p>
+        <p style={{  textAlign:'center',color:'white' }}>Don't have an Account? <Link to='/signup' style={{ color: 'inherit', textDecoration: 'none', }}>Signup</Link> </p>
       </form>
      
     </div>
