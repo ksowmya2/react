@@ -15,7 +15,7 @@ const Login = () => {
           <input type="password" className="form-control pass" id="exampleInputPassword1" />
         </div>
         <button type="submit" className="btn ">
-        <Link to="/Dashboard" style={{ color: 'inherit', textDecoration: 'none' }} >Login</Link>
+        <Link to="/home" style={{ color: 'inherit', textDecoration: 'none' }} >Login</Link>
         </button>
         <p style={{  textAlign:'center',color:'white' }}>Don't have an Account? <Link to='/signup' style={{ color: 'inherit', textDecoration: 'none', }}>Signup</Link> </p>
       </form>

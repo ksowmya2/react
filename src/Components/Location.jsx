@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidenav from './Sidenav';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'; 
-import '../App.css';// Import your CSS file
+import '../App.css';
 import img22 from '../Assests/contactimg.svg'
 import { Col, Row } from 'react-bootstrap';
 
@@ -9,29 +9,30 @@ function Location() {
   return (
     <div>
       <Row>
-        {/* Fixed Sidenav */}
+       
         <Col sm={2}
           className="fixed-top h-100"
           style={{
             backgroundColor: '#3aa87b',
             paddingTop: '20px',
             paddingBottom: '20px',
-            left: 0,
-            zIndex: 1000,
-            overflowY: 'hidden',
-          }}
-        >
+            height: '100vh',
+            overflow: 'hidden'
+
+          }}>
+          
           <Sidenav />
         </Col>
 
-        {/* Main Content */}
+      
         <Col sm={10} style={{ marginLeft: '16.66%', padding: '0',  overflowX:'hidden' }}>
-      {/* <div className="col-10 d-flex flex-column align-items-center loca1"> */}
+      
         <h2 className="location-heading mt-4">Location</h2>
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15315396.169605643!2d69.93853833042493!3d20.419537884410843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c80c753a98f3%3A0x4525072cdc36d90e!2sInterflora%20India%20-%20The%20Flower%20Experts!5e0!3m2!1sen!2sin!4v1726722144773!5m2!1sen!2sin"
           width="100%"
           height="500px"
+          style={{ border: '0' }} 
           className="map-iframe"
           allowFullScreen
           loading="lazy"

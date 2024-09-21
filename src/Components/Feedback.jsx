@@ -38,16 +38,23 @@ function Feedback() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
+    <div style={{ overflowX: 'hidden' }}>
+      <div className="row" style={{ margin: 0 }}>
         {/* Sidebar */}
-        <div className="col-2">
+        <div className="col-2"
+          style={{
+            backgroundColor: '#3aa87b',
+            paddingTop: '20px',
+            paddingBottom: '20px',
+            height: '100vh',
+            overflowY: 'hidden'
+          }}>
           <Sidenav />
         </div>
 
         {/* Main Content */}
-        <div className="col-10 mt-5" >
-          <div className="feedback-container" style={{marginTop:'60px'}}>
+        <div className="col-10" style={{ marginTop: '60px', padding: '20px' }}>
+          <div className="feedback-container">
             <h2>Feedback</h2>
             <form onSubmit={handleSubmit}>
               <div className="question">
@@ -118,7 +125,7 @@ function Feedback() {
 
               <div className="question">
                 <p>Your feedback</p>
-                <textarea value={feedback} onChange={handleFeedbackChange} />
+                <textarea value={feedback} onChange={handleFeedbackChange} style={{ width: '100%', height: '100px' }} />
               </div>
 
               <button type="submit" className="submit-button">

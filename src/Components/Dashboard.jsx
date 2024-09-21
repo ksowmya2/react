@@ -22,13 +22,14 @@ function Dashboard() {
   const renderProductSection = (sectionTitle, products, productType) => (
     <>
       <h2 className='category-title'>{sectionTitle}</h2>
-      <Row className="maindata">
+      <Row className="maindata ">
         {products.map((e, index) => (
-          <Col sm={4} key={e.id} className="mb-4">
+          <Col sm={4} key={e.id} className="mb-4 ">
             <Link to={`/${productType}/${e.id}`}>
               <img 
                 src={e.image} 
                 alt={e.name} 
+                className='img-thumbnail'
                 style={{ height: '300px', width: '80%', objectFit: 'cover', borderRadius: '8px' }} 
               />
             </Link>
@@ -62,15 +63,15 @@ function Dashboard() {
                   <Button 
                     variant="success" 
                     style={{ 
-                      backgroundColor: '#5eb992', 
+                      backgroundColor: '#28a745' , 
                       color: 'white', 
                       transition: 'background-color 0.3s ease',
                       width: '150px'
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#28a745')}
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#5eb992')}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#198754')}
                   >
-                    View More
+                    View More <i class="fa-duotone fa-solid fa-arrow-right"></i>
                   </Button>
                 </Link>
               </div>
@@ -86,7 +87,7 @@ function Dashboard() {
       <div style={{ position: 'fixed', width: '250px', height: '100%', overflow: 'hidden' }}>
         <Sidenav />
       </div>
-      <div style={{ flex: 1, padding: '5%', marginLeft: '250px', overflow: 'hidden' }}>
+      <div style={{ flex: 1, padding: '3%', marginLeft: '250px', overflow: 'hidden' }}>
         {renderProductSection('Birthday Bouquets', birPreview, 'birthday')}
         {renderProductSection('Anniversary Flowers', anniPreview, 'anniversary')}
         {renderProductSection('Wedding Flowers', wedPreview, 'wedding')}

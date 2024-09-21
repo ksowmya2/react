@@ -72,16 +72,16 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-sm-4 text-center">
-                <img src={img11} alt="Subscription" className="img-fluid mx-auto" style={{width:'80%',height:'300px'}}/>
-                <h5 className="text-primary mt-3">Subscription</h5>
+                <img src={img11}  alt="Subscription" className="img-fluid mx-auto img-thumbnail img-thumbnail" style={{width:'80%',height:'300px'}}/>
+                <h5 className="txtcol mt-3">Subscription</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img6} alt="Birthday" className="img-fluid mx-auto" style={{width:'80%',height:'300px'}}/>
-                <h5 className="text-primary mt-3">Birthday</h5>
+                <img src={img6} alt="Birthday" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
+                <h5 className="txtcol mt-3">Birthday</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img7} alt="Anniversary" className="img-fluid mx-auto" style={{width:'80%',height:'300px'}}/>
-                <h5 className="text-primary mt-3">Anniversary</h5>
+                <img src={img7} alt="Anniversary" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
+                <h5 className="txtcol mt-3">Anniversary</h5>
               </div>
             </div>
           </div>
@@ -90,16 +90,16 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-sm-4 text-center">
-                <img src={img8} alt="Gift Hampers" className="img-fluid mx-auto" style={{width:'80%',height:'300px'}} />
-                <h5 className="text-primary mt-3">Gift Hampers</h5>
+                <img src={img8} alt="Gift Hampers" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}} />
+                <h5 className="txtcol mt-3">Gift Hampers</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img9} alt="Exotic Blooms" className="img-fluid mx-auto" style={{width:'80%',height:'300px'}}/>
-                <h5 className="text-primary mt-3">Exotic Blooms</h5>
+                <img src={img9} alt="Exotic Blooms" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
+                <h5 className="txtcol mt-3">Exotic Blooms</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img10} alt="Plant Gifts" className="img-fluid mx-auto" style={{width:'80%',height:'300px'}}/>
-                <h5 className="text-primary mt-3 mb-5">Plant Gifts</h5>
+                <img src={img10} alt="Plant Gifts" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
+                <h5 className="txtcol mt-3 mb-5">Plant Gifts</h5>
               </div>
             </div>
           </div>
