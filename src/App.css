@@ -740,6 +740,36 @@ body, html {
   margin-top: 150px;
   font-weight: bold;
 }
+/* cart icon */
+.cart-icon {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  text-decoration: none;
+  color: #fff; /* Change icon color */
+  background-color: #3aa87b; /* Background color for the icon */
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.cart-icon:hover {
+  background-color: #28a745; /* Darker green on hover */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red; /* Badge background color */
+  border-radius: 50%;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 
 
 

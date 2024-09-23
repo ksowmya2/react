@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import { productsData2 } from '../Data/Wedding';
 import { useCart } from '../order/CartContext'; // Import useCart for cart management
+import CartIcon from '../order/CartIcon'; 
 
 function Wedding1() {
   const { dispatch } = useCart(); // Access dispatch function from CartContext
@@ -13,6 +14,9 @@ function Wedding1() {
   };
 
   return (
+    <div><div style={{ position: 'absolute', top: '20px', right: '20px' }}>
+          <CartIcon /> 
+        </div>
     <Row className='maindata'>
       <h1 className='food1' style={{textAlign:'center',color:'#ff1d58',marginTop:'20px',fontFamily:'cursive'}}>Wedding Flowers</h1>
       {productsData2.map((e) => (
@@ -43,6 +47,7 @@ function Wedding1() {
         </Col>
       ))}
     </Row>
+    </div>
   );
 }
 

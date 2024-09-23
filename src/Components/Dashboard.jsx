@@ -7,8 +7,8 @@ import '../App.css';
 import { productsData1 } from '../Data/Anniversary';
 import { productsData2 } from '../Data/Wedding';
 import { productsData3 } from '../Data/Gift';
-import { useCart } from '../order/CartContext'; // Import the useCart hook
-
+import { useCart } from '../order/CartContext'; 
+import CartIcon from '../order/CartIcon'; 
 function Dashboard() {
   const birPreview = productsData.slice(0, 3); 
   const anniPreview = productsData1.slice(0, 3); 
@@ -33,7 +33,10 @@ function Dashboard() {
         padding: '10px', 
         transition: 'transform 0.2s',
         backgroundColor:'#e1e8f0'
-      }}>
+      }}> 
+      <div style={{ position: 'absolute', top: '20px', right: '20px' }}>
+          <CartIcon /> 
+        </div>
         {products.map((e, index) => (
           <Col sm={4} key={e.id} className="mb-4">
             <div 

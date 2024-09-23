@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThLarge, faHouse, faComment, faLocationDot, faBell, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import Image1 from '../Assests/profile.jpg';  // Make sure the path is correct
+import { faThLarge, faHouse, faComment, faLocationDot, faBell, faArrowRightFromBracket, faLeaf, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'; // Import the necessary icons
+import Image1 from '../Assests/profile.jpg';  // Ensure the path is correct
 import '../App.css'; 
 
 const Sidenav = () => {
@@ -12,8 +12,7 @@ const Sidenav = () => {
       <ul>
         <li>
           <Link to="/home">
-          <i className="fas fa-leaf fa-icon"></i>&nbsp;
-           Floral Charm
+            <FontAwesomeIcon icon={faLeaf} className="fa-icon" />&nbsp; Floral Charm
           </Link>
         </li>
         <li>
@@ -23,24 +22,22 @@ const Sidenav = () => {
         </li>
         <li>
           <Link to="/customization">
-          <i className="fas fa-hand-holding-heart fa-icon"></i>
-&nbsp;
-          Design Your &nbsp;&nbsp;Bouquet
+            <FontAwesomeIcon icon={faHeart} className="fa-icon" />&nbsp; Design Your &nbsp; &nbsp;&nbsp;&nbsp; Bouquet
           </Link>
         </li>
         <li>
           <Link to="/feedback">
-            <FontAwesomeIcon icon={faComment} className="fa-icon" />&nbsp;  Feedback
+            <FontAwesomeIcon icon={faComment} className="fa-icon" />&nbsp; Feedback
           </Link>
         </li>
         <li>
           <Link to="/location">
-            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" /> &nbsp; Location
+            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />&nbsp; Location
           </Link>
         </li>
         <li>
           <Link to="/cart">
-            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" /> &nbsp; Cart
+            <FontAwesomeIcon icon={faCartShopping} className="fa-icon" />&nbsp; Cart
           </Link>
         </li>
       </ul>
@@ -49,7 +46,6 @@ const Sidenav = () => {
       </div>
       <div className='head-2'>
         <h4>Hello Candy</h4>
-        {/* A new, more relevant tagline for the floral bouquet website */}
         <p>Bringing Blooms to Life, One Bouquet at a Time.</p>
       </div>
       <div className='log'>

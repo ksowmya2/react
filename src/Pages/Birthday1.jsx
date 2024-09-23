@@ -3,6 +3,7 @@ import { Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { productsData } from '../Data/Birthday';
 import { useCart } from '../order/CartContext'; // Import useCart hook
+import CartIcon from '../order/CartIcon'; 
 
 function Birthday1() {
   const { dispatch } = useCart(); // Get the dispatch function
@@ -13,6 +14,11 @@ function Birthday1() {
   };
 
   return (
+    <div>
+      <div style={{ position: 'absolute', top: '20px', right: '20px' }}>
+          <CartIcon /> 
+        </div>
+  
     <Row className='maindata'>
       <h1 className='food1' style={{ textAlign: 'center', color: '#ff1d58', marginTop: '20px', fontFamily: 'cursive' }}>Birthday Flowers</h1>
       {productsData.map((e) => (
@@ -39,6 +45,7 @@ function Birthday1() {
         </Col>
       ))}
     </Row>
+    </div>
   );
 }
 

@@ -2,7 +2,8 @@ import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { productsData1 } from '../Data/Anniversary';
-import { useCart } from '../order/CartContext'; // Import the useCart hook
+import { useCart } from '../order/CartContext'; 
+import CartIcon from '../order/CartIcon'; 
 
 function Anniversary1() {
   const { dispatch } = useCart(); // Get the dispatch function from the cart context
@@ -13,7 +14,14 @@ function Anniversary1() {
   };
 
   return (
+    <div><div style={{ position: 'absolute', top: '20px', right: '20px' }}>
+          <CartIcon /> 
+        </div>
+        <div style={{ position: 'absolute', top: '20px', right: '20px' }}>
+          <CartIcon /> 
+        </div>
     <Row className='maindata'>
+       
       <h1 className='food1' style={{ textAlign: 'center', color: '#ff1d58', marginTop: '20px', fontFamily: 'cursive' }}>Anniversary Flowers</h1>
       {productsData1.map((e) => (
         <Col sm={4} key={e.id} className="mb-4">
@@ -39,6 +47,7 @@ function Anniversary1() {
         </Col>
       ))}
     </Row>
+    </div>
   );
 }
 
