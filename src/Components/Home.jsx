@@ -12,6 +12,7 @@ import { Col, Row } from 'react-bootstrap';
 import img12 from '../Assests/trendimg1.webp';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import Sidenav from './Sidenav';
+import { Link } from 'react-router-dom';
 
 function Home() {
   
@@ -31,21 +32,55 @@ function Home() {
           sm={2}
           className="fixed-top h-100"
           style={{
-            backgroundColor: '#3aa87b',
+            backgroundColor: '#9a9ae4',
             paddingTop: '20px',
             paddingBottom: '20px',
             left: 0,
             zIndex: 1000,
             overflowY: 'hidden',
+            overflowX:'hidden',
+            width:'250px'
           }}
         >
           <Sidenav />
         </Col>
 
         {/* Main Content */}
-        <Col sm={10} style={{ marginLeft: '16.66%', padding: '0' }}>
+        <Col sm={10} style={{ marginLeft: '13.66%', padding: '0' }}>
           {/* Carousel */}
-          <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+          <div className="navbar m-5">
+            <div className="nav-item">
+          <Link to="/birthday"> <img className="nav-icon" src="https://res.cloudinary.com/interflora/assets/svg-icons/birthday_tiles.svg" style={{width:'50px'}}  alt="Birthday Flowers"/><br/>
+                <span>Birthday Flowers</span></Link> 
+            </div>
+            <div className="nav-item">
+            <Link to="/anniversary"><img className="nav-icon" src="https://res.cloudinary.com/interflora/assets/svg-icons/anniversary_tiles.svg" style={{width:'50px'}} alt="Anniversary Flowers"/><br/>
+                <span>Anniversary Flowers</span></Link> 
+            </div>
+            <div className="nav-item">
+            <Link to="/gift-hamper"><img src="https://res.cloudinary.com/interflora/assets/svg-icons/gift_hampers_tiles.svg"  style={{width:'50px'}} alt="Gift Hampers" className="nav-icon" /><br/>
+                <span>Gift Hampers</span></Link> 
+            </div>
+            <div className="nav-item">
+            <Link to="/wedding"><img src="https://res.cloudinary.com/interflora/assets/svg-icons/luxury_collection_tiles.svg"  style={{width:'50px'}} alt="Exotic Blooms" className="nav-icon" /><br/>
+                <span>Exotic Blooms</span></Link> 
+            </div>
+            <div className="nav-item">
+            <Link to="/birthday"> <img  src="https://res.cloudinary.com/interflora/assets/svg-icons/plants_tiles_v1.svg" style={{width:'50px'}} alt="Plant Gifts" className="nav-icon" /><br/>
+                <span>Plant Gifts</span></Link> 
+            </div>
+            <div className="nav-item">
+            <Link to="/anniversary"> <img  src="https://res.cloudinary.com/interflora/assets/svg-icons/new_arrivals_tiles.svg" style={{width:'50px',paddingLeft:'0px'}} alt="New Arrivals" className="nav-icon" /><br/>
+                <span>New Arrivals</span></Link>
+            </div>
+            <div className="nav-item">
+            {/* <i class="fa-solid fa-truck"></i> */}
+            <Link to="/"><img  src="https://res.cloudinary.com/interflora/assets/svg-icons/same_day_delivery_tiles.svg" style={{width:'50px'}}  alt="Same Day Flower Delivery"></img><br/>
+                <span>Same Day Delivery</span></Link>
+            </div>
+        </div>
+
+          <div id="carouselExampleIndicators" className="carousel slide ml-5 mr-0" data-bs-ride="carousel" data-bs-interval="1000">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -53,13 +88,13 @@ function Home() {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={img1} className="d-block w-100" alt="img"/>
+      <img src={img1} className="d-block w-100" alt="img" style={{borderRadius:'20px'}}/>
     </div>
     <div className="carousel-item">
-      <img src={img2} className="d-block w-100" alt="img1"/>
+      <img src={img2} className="d-block w-100" alt="img1" style={{borderRadius:'20px'}}/>
     </div>
     <div className="carousel-item">
-      <img src={img3} className="d-block w-100" alt="img2"/>
+      <img src={img3} className="d-block w-100" alt="img2" style={{borderRadius:'20px'}}/>
     </div>
     
   </div>
@@ -72,16 +107,16 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-sm-4 text-center">
-                <img src={img11}  alt="Subscription" className="img-fluid mx-auto img-thumbnail img-thumbnail" style={{width:'80%',height:'300px'}}/>
-                <h5 className="txtcol mt-3">Subscription</h5>
+               <Link to='/birthday'> <img src={img11}  alt="Subscription" className="img-fluid mx-auto img-thumbnail img-thumbnail" style={{width:'80%',height:'300px'}}/></Link>
+                <h5 className="txtcol mt-3">Birthday Bouquets </h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img6} alt="Birthday" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
-                <h5 className="txtcol mt-3">Birthday</h5>
+              <Link to='/anniversary'>  <img src={img6} alt="Birthday" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/></Link>
+                <h5 className="txtcol mt-3">Anniversary Bouquets</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img7} alt="Anniversary" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
-                <h5 className="txtcol mt-3">Anniversary</h5>
+              <Link to='/gift-hamper'> <img src={img7} alt="Anniversary" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/></Link>
+                <h5 className="txtcol mt-3"> Subscription </h5>
               </div>
             </div>
           </div>
@@ -90,15 +125,15 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-sm-4 text-center">
-                <img src={img8} alt="Gift Hampers" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}} />
+              <Link to='/gift-hamper'><img src={img8} alt="Gift Hampers" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}} /></Link>
                 <h5 className="txtcol mt-3">Gift Hampers</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img9} alt="Exotic Blooms" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
+              <Link to='/wedding'> <img src={img9} alt="Exotic Blooms" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/></Link>
                 <h5 className="txtcol mt-3">Exotic Blooms</h5>
               </div>
               <div className="col-sm-4 text-center">
-                <img src={img10} alt="Plant Gifts" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/>
+              <Link to='/anniversary'><img src={img10} alt="Plant Gifts" className="img-fluid mx-auto img-thumbnail" style={{width:'80%',height:'300px'}}/></Link>
                 <h5 className="txtcol mt-3 mb-5">Plant Gifts</h5>
               </div>
             </div>

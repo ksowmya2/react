@@ -43,11 +43,14 @@ function Feedback() {
         {/* Sidebar */}
         <div className="col-2"
           style={{
-            backgroundColor: '#3aa87b',
+            backgroundColor: '#9a9ae4',
             paddingTop: '20px',
             paddingBottom: '20px',
+            position:'fixed',
             height: '100vh',
-            overflowY: 'hidden'
+            overflowY: 'hidden',
+            overflowX:'hidden',
+            width:'250px'
           }}>
           <Sidenav />
         </div>
@@ -56,6 +59,9 @@ function Feedback() {
         <div className="col-10" style={{ marginTop: '60px', padding: '20px' }}>
           <div className="feedback-container">
             <h2>Feedback</h2>
+            <p style={{
+          fontFamily:'cursive',textAlign:'center' ,color:'Highlight'
+        }}>Your Words Help Us Grow!</p>
             <form onSubmit={handleSubmit}>
               <div className="question">
                 <p>How would you describe your mood after using our product for the first time?</p>

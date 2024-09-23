@@ -6,14 +6,28 @@ import Sidenav from './Sidenav';
 
 function Customization() {
   return (
-    <div className='container-fluid'>
-      <div className='sidebar'>
-        <Sidenav />
-      </div>
-      <div className='content'>
+    <div style={{ overflowX: 'hidden' }}>
+      <div className="row" style={{ margin: 0 }}>
+        {/* Sidebar */}
+        <div className="col-2"
+          style={{
+            position: 'fixed',
+            backgroundColor: '#9a9ae4',
+            paddingTop: '20px',
+            paddingBottom: '20px',
+            height: '100vh',
+            overflowY: 'hidden',
+            zIndex: 1000,
+            width:'250px'
+          }}>
+          <Sidenav />
+        </div>
+
+        {/* Main Content */}
+        <div className="col-10" style={{ marginTop: '10px', padding: '20px',marginLeft:'20%' }}>
         <div className='custimg'>
           <div>
-            <img src={img21} alt='txt' style={{ width:'100%', height:'600px', fontSize: '24px' }} />
+            <img src={img21} alt='txt' style={{ width: '100%', height: '600px', fontSize: '24px' }} />
           </div>
           <div className='container-fluid custtxt'>
             <h1>FLORIST STORE</h1>
@@ -27,6 +41,7 @@ function Customization() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

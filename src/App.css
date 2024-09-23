@@ -60,26 +60,80 @@
  border: 1px solid #757e7e; 
 }
 /* home */
-.sidenav2 {
-  position: fixed; /* Fix the sidebar */
-  top: 0;
-  left: 0;
-  width: 16.66667%; /* This corresponds to col-2 in Bootstrap (1/6 of the width) */
-  height: 100vh; /* Full height of the viewport */
-  background-color: #f8f9fa; /* Background color */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
-  overflow-y: auto; /* Enable scrolling if content overflows */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 0;
+  border: 1px solid #e1c585;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #444;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-right: 10px; 
+  position: relative;
+  padding-left: 0;
+  padding-right: 15px; 
+}
+
+
+.nav-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25%;
+  transform: translateY(-25%);
+  height: 100%; /* Increase the height of the border */
+  width: 1px;
+  background-color: #e1c585;
+}
+
+.nav-item .nav-icon {
+  width: 25px; /* Adjust the size of the icon */
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+ .nav-item span {
+  color: #817474;
+}
+
+/* .navbar .nav-item:hover {
+  color: #6863b6; 
+  cursor: pointer;
+}  */
+.navbar .nav-item {
+  position: relative;
+  z-index: 1;
+}
+
+/* .navbar .nav-item:hover {
+  color: #6863b6; 
+  cursor: pointer;
+  background-image: url('./Assests/ani1.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  z-index: 0; 
+  padding: 10px; 
+} */
 
 .main-content1 {
   margin-left: 200px; /* Leave space for the fixed sidebar */
   padding: 20px; /* Add some padding */
 }
 .txtcol{
-  color:#3aa87b;
+  color:#f75990;
   font-size: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
+  
 }
 
 /* side nav  */
@@ -95,24 +149,25 @@
   overflow-y: auto; 
 }
 
-/* Ensure the content area adjusts accordingly */
+
 .content {
   margin-left: 16.66667%; 
-  padding: 20px; /* Add padding as needed */
+  padding: 20px; 
 }
 .sidenav {
   width: 250px;
   height: 100vh;
-  background-color: #3aa87b;  
+  background-color:  #9a9ae4; 
   padding: 20px;
-  color: white;  
+  color:  #333333;  
   font-family: 'Arial', sans-serif;
   position: relative;
 }
 
 .sidenav h2.head1 {
   font-size: 24px;
-  color: white;  /* Text color for the heading */
+  color:#ffffff;
+  font-size: 35px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -138,8 +193,8 @@
 
 
 .sidenav ul li a:hover {
-  color: #5EA497;  /* Text color on hover */
-  background-color: #333;  /* Background color on hover */
+  color: #ffffff;  /* Text color on hover */
+  background-color: #6863b6;  /* Background color on hover */
 }
 
 
@@ -152,7 +207,7 @@
 
 
 .sidenav ul li a:hover .fa-icon {
-  background-color: #5EA497;  /* Background color for icon on hover */
+  background-color: #211999;  /* Background color for icon on hover */
   color: white; 
   border-radius: 5px;
   padding: 5px;
@@ -165,14 +220,14 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 3px solid #9B9C9B; 
+  border: 3px solid #4c4c8b; 
   background-color: transparent; 
   transition: all 0.3s ease;
 }
 
 /* Hover effect on profile image */
 .img img:hover {
-  border-color: #5EA497;  /* Change border color on hover */
+  border-color: #211999;  /* Change border color on hover */
 }
 
 /* Profile text */
@@ -188,8 +243,11 @@
 }
 
 .head-2 p {
-  font-size: 14px;
-  color: #CCCCCC;  
+  font-size: 16px;
+  color:#ffffff; 
+  padding-right: 20px;
+  margin-bottom: 30px;
+
 }
 
 
@@ -198,13 +256,13 @@
   bottom: 10px;  /* Reduced from 20px to 10px */
   width: 100%;
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .log a {
   text-decoration: none;
-  color: #FFFFFF;  /* Text color for logout button */
-  font-size: 18px;
+  color: #211999;  /* Text color for logout button */
+  font-size: 22px;
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
@@ -212,7 +270,7 @@
 }
 
 .log a:hover {
-  background-color: #5EA497;  /* Background color on hover */
+  background-color: #6762af;  /* Background color on hover */
   color: white;  /* Text color on hover */
 }
 /* dashboard */
@@ -220,11 +278,12 @@
   overflow: hidden; /* Prevent scroll bars */
 }
 .category-title {
-  color: #3aa87b; /* You can choose any color you like */
+  color:   #f75990; 
   text-align: center;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 38px;
-  margin: 20px 0; /* Add some margin for spacing */
+  font-family:cursive;
+  margin: 20px 0;
 }
 
 
@@ -239,20 +298,23 @@
     margin-left: 100px; 
 }
 
-.sidenav1 {
+/* .sidenav1 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 180px; /* Sidebar width */
+  width: 180px;
   height: 100vh;
   overflow: hidden;
   width: 16.66667%; 
-  background-color: #3aa87b; 
+  background-color: #9a9ae4; ; 
   z-index: 1000; 
   overflow-y: auto; 
+} */
+.location-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-
 .content {
   margin-left: 16.66667%; /* Offset for the fixed sidebar */
   padding: 20px; /* Add padding as needed */
@@ -262,6 +324,7 @@
 .location-heading {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 .contact-container {
@@ -273,6 +336,8 @@
   border-radius: 8px;
   width: 80%;
   max-width: 800px;
+  margin-bottom: 50px;
+ 
 }
 
 a {
@@ -287,6 +352,7 @@ body {
 .contact-heading {
   font-size: 2rem;
   margin-bottom: 20px;
+  
 }
 
 .contact-paragraph {
@@ -327,16 +393,19 @@ body {
   transition: background-color 0.3s;
 }
 
+
 .map-iframe {
-  width: calc(100% - 20px); /* Full width minus the gap */
   height: 600px;
+  width: 100%; /* Set to 100% for full width */
   border: none;
-  
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds shadow to the map */
-  margin-left: 20px; /* Adds gap between sidenav and map */
-  margin-bottom: 40px; /* Keep the bottom margin */
+  margin-left: 28%;
+  overflow-x:initial;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Remove all margins to use full width */
+  display: block; /* Ensure it behaves as a block element */
 }
+
 
 .info a{
   text-decoration: none;
@@ -349,7 +418,8 @@ body {
 /* feedback */
 .feedback-container {
   max-width: 600px;
-  margin: 0 auto;
+  margin-left: 50%;
+  margin-top: 10px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -377,6 +447,8 @@ h2 {
 
 .mood-options button:hover {
   transform: scale(1.2);
+  background-color: #a3b5c7;
+  border-radius: 50%;
 }
 
 .rating-options label {
@@ -411,6 +483,10 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+.submit-button:hover{
+  background-color:#7ff35b;
+  color: #333333;
 }
 
 /* customization */
@@ -460,7 +536,210 @@ button:hover {
   color: white;
 }
 
-/* Ensure sidenav is fixed */
+/* anniversary */
+/* Remove horizontal scrollbar */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Ensure the Row takes full width without causing overflow */
+.maindata {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card1 {
+  margin: auto;
+}
+
+.card-body {
+  text-align: center; /* Center the content in the card body */
+}
+
+/* cart */
+/* General Cart Page Styles */
+.cart-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Heading styles */
+.cart-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Empty cart message */
+.cart-container p {
+  font-size: 18px;
+  color: #888;
+}
+
+/* Cart item styles */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.cart-item div strong {
+  font-size: 20px;
+  color: #333;
+}
+
+.cart-item div p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Quantity and buttons */
+.cart-item-buttons button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.cart-item-buttons button:hover {
+  background-color: #ccc;
+}
+
+.cart-item-buttons .remove-btn {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.cart-item-buttons .remove-btn:hover {
+  background-color: #ff0000;
+}
+
+/* Total price and items */
+.cart-summary h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+.cart-summary {
+  margin-top: 20px;
+}
+
+.place-order-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+}
+
+.place-order-btn:hover {
+  background-color: #218838;
+}
+
+/* Sidenav */
+.fixed-sidenav {
+  background-color: #9a9ae4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 250px;
+  position: fixed;
+}
+
+.main-content {
+  margin-left: 260px; /* Adjust according to your sidenav width */
+  padding: 20px;
+}
+/* placeorder */
+
+.place-order-container {
+  padding: 20px;
+ 
+  background-color: #8dc6ce;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Heading */
+.place-order-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form inputs */
+.place-order-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.place-order-container input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Place Order Button */
+.place-order-container button {
+  background-color: #0a4749;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.place-order-container button:hover {
+  background-color: #218838;
+}
+
+/* Order placed message */
+.order-placed-message {
+  text-align: center;
+  font-size: 30px;
+  color: #781a44;
+  margin-top: 150px;
+  font-weight: bold;
+}
 
 
 

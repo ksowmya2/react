@@ -12,27 +12,35 @@ const Sidenav = () => {
       <ul>
         <li>
           <Link to="/home">
-            <FontAwesomeIcon icon={faHouse} className="fa-icon" /> Home
+          <i className="fas fa-leaf fa-icon"></i>&nbsp;
+           Floral Charm
           </Link>
         </li>
         <li>
           <Link to="/dashboard">
-            <FontAwesomeIcon icon={faThLarge} className="fa-icon" /> Dashboard
+            <FontAwesomeIcon icon={faThLarge} className="fa-icon" />&nbsp; Dashboard
           </Link>
         </li>
         <li>
           <Link to="/customization">
-            <FontAwesomeIcon icon={faBell} className="fa-icon" /> Customization
+          <i className="fas fa-hand-holding-heart fa-icon"></i>
+&nbsp;
+          Design Your &nbsp;&nbsp;Bouquet
           </Link>
         </li>
         <li>
           <Link to="/feedback">
-            <FontAwesomeIcon icon={faComment} className="fa-icon" /> Feedback
+            <FontAwesomeIcon icon={faComment} className="fa-icon" />&nbsp;  Feedback
           </Link>
         </li>
         <li>
           <Link to="/location">
-            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" /> Location
+            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" /> &nbsp; Location
+          </Link>
+        </li>
+        <li>
+          <Link to="/cart">
+            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" /> &nbsp; Cart
           </Link>
         </li>
       </ul>
