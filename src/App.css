@@ -4,14 +4,14 @@
 .login-container {
   display: flex;
   justify-content: center;
-
+ 
   align-items: center;
   height: 100vh;
   background-color: #f0f2f5; 
 }
 
 .login-form {
-  background-color: #fff; 
+  padding: 50px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -25,17 +25,22 @@
 }
 
 .form-label{
-  color: #FFFFFF;
+  color: #254E58;
+  font-size: 25px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 3px;
 }
 
 .form-control {
   border: 1px solid #ced4da; /* Light border color */
   border-radius: 4px; /* Rounded corners */
-  padding: 0.45rem; /* Padding inside input */
+  padding: 0.70rem; /* Padding inside input */
   font-size: 1rem; /* Font size */
   margin-left: 10px; 
   color: white;
-  width: 200px;
+  width: 300px;
+  margin-left: 50px;
   
 }
 

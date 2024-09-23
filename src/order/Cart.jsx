@@ -27,7 +27,8 @@ const Cart = () => {
         </Col>
 
         {/* Main Content */}
-        <Col sm={10} className="main-content">
+        <Col sm={10} className="main-content"
+        style={{overflowX:'hidden'}}>
           <div className="cart-container">
             <h2>Your Cart</h2>
             {cart.length === 0 ? (
