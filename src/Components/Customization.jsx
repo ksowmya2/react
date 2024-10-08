@@ -16,32 +16,57 @@ function Customization() {
             paddingTop: '20px',
             paddingBottom: '20px',
             height: '100vh',
-            overflowY: 'hidden',
+            overflow: 'hidden',
             zIndex: 1000,
-            width:'250px'
+            width: '250px'
           }}>
           <Sidenav />
         </div>
 
         {/* Main Content */}
-        <div className="col-10" style={{ marginTop: '10px', padding: '20px',marginLeft:'20%' }}>
-        <div className='custimg'>
-          <div>
-            <img src={img21} alt='txt' style={{ width: '100%', height: '600px', fontSize: '24px' }} />
-          </div>
-          <div className='container-fluid custtxt'>
-            <h1>FLORIST STORE</h1>
-            <p style={{ fontSize: '16px' }}>
-              Send the best token of love. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, impedit.
-            </p>
-            <h1 style={{ fontFamily: 'Lucida Handwriting, cursive', fontSize: '24px' }}>
-              Beautiful Flowers
-            </h1>
-            <button>50% Discount</button>
+        <div className="col-10" style={{  padding: '10px', marginLeft: '17%',overflowY:'hidden',height:'100vh' }}>
+          <div className='custimg' style={{ position: 'relative' }}>
+            {/* Darkened Background Image */}
+            <div 
+              style={{ 
+               
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center', 
+                width: '100%', 
+                height: '600px', 
+                position: 'relative',
+                filter: 'brightness(50%)',  // Darkens the image
+              }}>
+            </div>
+
+            {/* Text Overlay */}
+            <div className='container-fluid custtxt' 
+              style={{
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                display: 'flex', 
+                flexDirection: 'column',
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                color: 'white'  // White text for better contrast
+              }}>
+              <h1>FLORIST STORE</h1>
+              <p style={{ fontSize: '16px' }}>
+                Send the best token of love. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, impedit.
+              </p>
+              <h1 style={{ fontFamily: 'Lucida Handwriting, cursive', fontSize: '24px' }}>
+                Beautiful Flowers
+              </h1>
+              <button   className='hover-button' style={{ backgroundColor: '#0a4749', border: 'none', padding: '10px 20px', color: 'white', fontSize: '18px' }}>
+                50% Discount
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
