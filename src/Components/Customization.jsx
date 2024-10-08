@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
-import img21 from '../Assests/backimg21.jpg';
-import { Col, Row, Button } from 'react-bootstrap';
+
+
 import Sidenav from './Sidenav';
 
 function Customization() {

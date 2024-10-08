@@ -3,7 +3,7 @@ import { useCart } from '../order/CartContext';
 import '../App.css'; // Import the CSS file
 
 const PlaceOrder = () => {
-  const { cart, dispatch } = useCart();
+  const {  dispatch } = useCart();
   const [orderDetails, setOrderDetails] = useState({
     name: '',
     phone: '',

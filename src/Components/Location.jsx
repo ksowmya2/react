@@ -29,8 +29,7 @@ function Location() {
         <Col sm={10} style={{ marginLeft: '16.66%', padding: '0',  overflowX:'hidden' }}>
       
         <h2 className="location-heading mt-4">Location</h2>
-               <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15315396.169605643!2d69.93853833042493!3d20.419537884410843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c80c753a98f3%3A0x4525072cdc36d90e!2sInterflora%20India%20-%20The%20Flower%20Experts!5e0!3m2!1sen!2sin!4v1726722144773!5m2!1sen!2sin"
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15315396.169605643!2d69.93853833042493!3d20.419537884410843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c80c753a98f3%3A0x4525072cdc36d90e!2sInterflora%20India%20-%20The%20Flower%20Experts!5e0!3m2!1sen!2sin!4v1726722144773!5m2!1sen!2sin"
           width="100%"
           height="500px"
           style={{ border: '0',overflow:'hidden' }} 

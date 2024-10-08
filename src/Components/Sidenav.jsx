@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThLarge, faHouse, faComment, faLocationDot, faBell, faArrowRightFromBracket, faLeaf, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'; // Import the necessary icons
+import { faThLarge,  faComment, faLocationDot,  faArrowRightFromBracket, faLeaf, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons'; // Import the necessary icons
 import Image1 from '../Assests/profile.jpg';  // Ensure the path is correct
 import '../App.css'; 
 

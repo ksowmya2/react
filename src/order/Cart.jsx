@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCart } from '../order/CartContext'; // Import your custom cart context
 import { Col, Row, Button } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom'; // For navigation after place order
+import {  useNavigate } from 'react-router-dom'; // For navigation after place order
 import Sidenav from '../Components/Sidenav';
 import '../App.css'; // Import the CSS file
 
