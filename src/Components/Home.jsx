@@ -75,7 +75,7 @@ function Home() {
             </div>
             <div className="nav-item">
             {/* <i class="fa-solid fa-truck"></i> */}
-            <Link to="/"><img  src="https://res.cloudinary.com/interflora/assets/svg-icons/same_day_delivery_tiles.svg" style={{width:'50px'}}  alt="Same Day Flower Delivery"></img><br/>
+            <Link to="/cart"><img  src="https://res.cloudinary.com/interflora/assets/svg-icons/same_day_delivery_tiles.svg" style={{width:'50px'}}  alt="Same Day Flower Delivery"></img><br/>
                 <span>Same Day Delivery</span></Link>
             </div>
         </div>

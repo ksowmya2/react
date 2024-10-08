@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../order/CartContext';
 import '../App.css'; // Import the CSS file
+import img80 from '../Assests/order121.jpg'; 
 
 const PlaceOrder = () => {
   const {  dispatch } = useCart();
@@ -29,8 +30,19 @@ const PlaceOrder = () => {
     dispatch({ type: 'CLEAR_CART' }); // Clear the cart after placing order
   };
 
-  if (orderPlaced) {
-    return <h2 className="order-placed-message">Order placed! Thank you for shopping with us.</h2>;
+  
+    if (orderPlaced) {
+      return (
+        <div className="order-confirmation">
+          <h2 className="order-placed-message">Order placed! Thank you for shopping with us.</h2>
+          <img 
+            src={img80} 
+            alt="Order confirmation" 
+            className="order-placed-image" 
+            style={{ marginTop: '20px', width: '300px', height: 'auto',marginLeft:'40%' }} 
+          />
+        </div>     );
+
   }
 
   return (
