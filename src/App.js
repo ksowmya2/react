@@ -25,7 +25,7 @@ function App() {
         {/* Define your routes inside Routes */}
         <Routes>
          
-          <Route path="/" element={<Login />} />
+          <Route path="/react" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/home' element={<Home />} />

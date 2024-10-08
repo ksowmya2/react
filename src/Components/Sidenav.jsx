@@ -49,7 +49,7 @@ const Sidenav = () => {
         <p>Bringing Blooms to Life, One Bouquet at a Time.</p>
       </div>
       <div className='log'>
-        <Link to='/'>
+        <Link to='/react'>
           <FontAwesomeIcon icon={faArrowRightFromBracket} /> Logout
         </Link>
       </div>
