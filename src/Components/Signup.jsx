@@ -24,7 +24,7 @@ function Signup() {
         </div>
         <div className="col-12">
         <button type="submit" className="btn ">
-            <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Sign up</Link>
+            <Link to="/react" style={{ color: 'inherit', textDecoration: 'none' }}>Sign up</Link>
           </button>
         </div>
       </form>
